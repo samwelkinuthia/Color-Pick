@@ -10,6 +10,8 @@ var colors = [
 
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
+//set picked color.
+var pickedColor = colors[3];
 
 //loop for every color, set background as value of i.
 for(var i = 0; i < squares.length; i++){
