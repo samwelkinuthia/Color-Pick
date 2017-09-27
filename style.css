@@ -1,5 +1,9 @@
-.square{
-  padding:10px;
-  float:left;
-  margin:5px;
+.container {
+  margin: 0 auto;
+}
+
+.square {
+  padding: 10px;
+  float: left;
+  margin: 5px;
 }
