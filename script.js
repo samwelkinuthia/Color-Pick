@@ -13,6 +13,9 @@ var squares = document.querySelectorAll(".square");
 //set picked color.
 var pickedColor = colors[3];
 
+var colorDisplay = document.getElementById("colorDisplay");
+colorDisplay.textContent = pickedColor;
+
 //loop for every color, set background as value of i.
 for(var i = 0; i < squares.length; i++){
   squares[i].style.background = colors[i]
