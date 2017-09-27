@@ -18,5 +18,11 @@ colorDisplay.textContent = pickedColor;
 
 //loop for every color, set background as value of i.
 for(var i = 0; i < squares.length; i++){
+  //initial colors
   squares[i].style.background = colors[i]
+
+  //click listeners for click event
+  squares[i].addEventListener("click", function(){
+    alert("clicked a square!")
+  });
 }
