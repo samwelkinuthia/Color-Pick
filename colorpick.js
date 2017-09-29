@@ -11,18 +11,24 @@ var colors = [
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
 //set picked color.
-var pickedColor = colors[3];
-
+var pickedColor = colors[4];
 var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 
 //loop for every color, set background as value of i.
-for(var i = 0; i < squares.length; i++){
+for (var i = 0; i < squares.length; i++) {
   //initial colors
   squares[i].style.background = colors[i]
 
-  //click listeners for click event
-  squares[i].addEventListener("click", function(){
-    alert("clicked a square!")
-  });
-}
+  // //click listeners for click event
+  squares[i].addEventListener("click", function() {
+  //     //grab the color of the clicked square
+      var clickedColor = this.style.background;
+  //compare to pickedColor
+      if (clickedColor === pickedColor) {
+        alert("you got it right!");
+      }  else {
+        alert("wrong!.. Try again");
+      }
+    });
+  }
