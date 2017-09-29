@@ -13,6 +13,8 @@ var squares = document.querySelectorAll(".square");
 //set picked color.
 var pickedColor = colors[4];
 var colorDisplay = document.getElementById("colorDisplay");
+//message
+var messageDisplay = document.querySelector("#message");
 colorDisplay.textContent = pickedColor;
 
 //loop for every color, set background as value of i.
@@ -28,7 +30,7 @@ for (var i = 0; i < squares.length; i++) {
       if (clickedColor === pickedColor) {
         alert("you got it right!");
       }  else {
-        alert("wrong!.. Try again");
+        this.style.background = "#f2f2f2";
       }
     });
   }
