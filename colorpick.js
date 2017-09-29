@@ -11,7 +11,7 @@ var colors = [
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
 //set picked color.
-var pickedColor = colors[4];
+var pickedColor = pickedColor();
 var colorDisplay = document.getElementById("colorDisplay");
 //message
 var messageDisplay = document.querySelector("#message");
@@ -24,7 +24,7 @@ for (var i = 0; i < squares.length; i++) {
   squares[i].style.background = colors[i]
   // //click listeners for click event
   squares[i].addEventListener("click", function() {
-    //     //grab the color of the clicked square
+    //grab the color of the clicked square
     var clickedColor = this.style.background;
     //compare to pickedColor
     if (clickedColor === pickedColor) {
@@ -45,3 +45,5 @@ function changeColors(color){
     squares[i].style.background = color;
   }
 }
+
+//randomize color selection
