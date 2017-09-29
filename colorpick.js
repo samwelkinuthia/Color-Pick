@@ -15,6 +15,7 @@ var pickedColor = colors[4];
 var colorDisplay = document.getElementById("colorDisplay");
 //message
 var messageDisplay = document.querySelector("#message");
+
 colorDisplay.textContent = pickedColor;
 
 //loop for every color, set background as value of i.
@@ -31,6 +32,7 @@ for (var i = 0; i < squares.length; i++) {
         alert("you got it right!");
       }  else {
         this.style.background = "#f2f2f2";
+        messageDisplay.textContent = "Try Again"
       }
     });
   }
