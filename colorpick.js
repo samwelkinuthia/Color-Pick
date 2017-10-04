@@ -8,7 +8,8 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 //message
 var messageDisplay = document.querySelector("#message");
-
+//selected H1
+var h1 = document.getElementById("title");
 colorDisplay.textContent = pickedColor;
 
 //loop for every color, set background as value of i.
@@ -23,6 +24,7 @@ for (var i = 0; i < squares.length; i++) {
     if (clickedColor === pickedColor) {
       messageDisplay.textContent = "Correct!"
       changeColors(clickedColor);
+      h1.style.background = clickedColor;
     } else {
       this.style.background = "#f2f2f2";
       messageDisplay.textContent = "Try Again"
