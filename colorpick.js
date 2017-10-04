@@ -7,6 +7,7 @@ var colors = [
   "rgb(255, 20, 180)",
   "rgb(255, 50, 250)"
 ]
+var colors = generateRandomColors(6);
 
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
