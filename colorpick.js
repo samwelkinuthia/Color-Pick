@@ -1,12 +1,4 @@
 //array of colours to be selected.
-var colors = [
-  "rgb(255, 0, 0)",
-  "rgb(255, 255, 0)",
-  "rgb(255, 0, 255)",
-  "rgb(255, 255, 10)",
-  "rgb(255, 20, 180)",
-  "rgb(255, 50, 250)"
-]
 var colors = generateRandomColors(6);
 
 //selecting all six colours defined in var colors.
@@ -51,4 +43,30 @@ function changeColors(color){
 function pickColor(){
   var random = Math.floor(Math.random() * colors.length)
   return colors[random];
+}
+//random color generator.
+function generateRandomColors(num){
+  //empty array to hold the colors.
+  var arr = []
+  //add colors to the array.
+  //repeat num times.
+  for(var i = 0; i < num; i++){
+    //push colors to array
+    arr.push(randomColor());
+  }
+  //return the array
+  return arr;
+}
+
+//the random color generator
+function randomColor(){
+  //pick red
+  var r = Math.floor(Math.random() * 256);
+  //pick green
+  var g = Math.floor(Math.random() * 256);
+  //pick blue
+  var b = Math.floor(Math.random() * 256);
+
+  return "rgb(" + r + ", " + g + ", " + b + ")";
+
 }
