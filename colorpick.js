@@ -11,7 +11,7 @@ var colors = [
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
 //set picked color.
-var pickedColor = pickedColor();
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 //message
 var messageDisplay = document.querySelector("#message");
@@ -47,7 +47,7 @@ function changeColors(color){
 }
 
 //randomize color selection
-function pickedColor(){
+function pickColor(){
   var random = Math.floor(Math.random() * colors.length)
   return colors[random];
 }
