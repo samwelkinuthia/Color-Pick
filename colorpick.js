@@ -14,8 +14,17 @@ var h1 = document.getElementById("title");
 var resetButton = document.querySelector("#reset");
 
 resetButton.addEventListener("click", function(){
-  alert("CLICKED!");
-});
+  //generate all new colors
+  colors = generateRandomColors(6);
+  //pick a random color
+  pickedColor = pickColor();
+  //change color display to match picked color
+  colorDisplay.textContent = pickedColor;
+  //change square colors
+  for(var i = 0; i < squares.length; i++){
+    squares[i].style.background = colors[i];
+  }
+})
 
 colorDisplay.textContent = pickedColor;
 
