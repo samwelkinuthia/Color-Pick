@@ -24,6 +24,8 @@ resetButton.addEventListener("click", function(){
   for(var i = 0; i < squares.length; i++){
     squares[i].style.background = colors[i];
   }
+  //reset header background-color
+  h1.style.background = "#f2f2f2";
 })
 
 colorDisplay.textContent = pickedColor;
