@@ -43,6 +43,7 @@ for (var i = 0; i < squares.length; i++) {
       messageDisplay.textContent = "Correct!"
       changeColors(clickedColor);
       h1.style.background = clickedColor;
+      resetButton.textContent = "Play Again";
     } else {
       this.style.background = "#f2f2f2";
       messageDisplay.textContent = "Try Again"
