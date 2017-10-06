@@ -1,15 +1,23 @@
-body{
+body {
   background-color: #f2f2f2;
 }
+
 .container {
   margin: 0 auto;
   max-width: 600px;
 }
 
 .square {
-  padding-bottom:30%;
+  padding-bottom: 30%;
   float: left;
   margin: 5px;
-  width:30%;
+  width: 30%;
   background-color: red;
+}
+
+#stripe {
+  background-color: white;
+  height: 20px;
+  text-align: center;
+  padding: 5px;
 }
