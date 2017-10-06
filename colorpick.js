@@ -10,6 +10,13 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 //selected H1
 var h1 = document.getElementById("title");
+//event listener for reset button
+var resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function(){
+  alert("CLICKED!");
+});
+
 colorDisplay.textContent = pickedColor;
 
 //loop for every color, set background as value of i.
