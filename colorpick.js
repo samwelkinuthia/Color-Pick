@@ -13,8 +13,21 @@ var h1 = document.getElementById("title");
 //event listener for reset button
 var resetButton = document.querySelector("#reset");
 //easy and hard buttons
-var easyBtn = document.querySelector("#hardBtn");
-var hardBtn = document.querySelector("#easyBtn");
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
+
+//easy btn test
+easyBtn.addEventListener("click", function(){
+  easyBtn.classList.add("selected");
+});
+
+
+hardBtn.addEventListener("click", function(){
+  alert("Clicked!");
+});
+
+
+
 resetButton.addEventListener("click", function(){
   //generate all new colors
   colors = generateRandomColors(6);
