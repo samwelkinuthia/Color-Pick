@@ -26,7 +26,8 @@ easyBtn.addEventListener("click", function() {
   hardBtn.classList.remove("selected");
   easyBtn.classList.add("selected");
   //generate 3 random colors
-  colors = generateRandomColors(3);
+  numSquares = 3;
+  colors = generateRandomColors(numSquares);
   //pick color
   pickedColor = pickColor();
   //set title background equal to picked color
@@ -46,8 +47,9 @@ easyBtn.addEventListener("click", function() {
 hardBtn.addEventListener("click", function() {
   hardBtn.classList.add("selected");
   easyBtn.classList.remove("selected");
-  //generate 3 random colors
-  colors = generateRandomColors(6);
+  //generate 6 random colors
+  numSquares = 6;
+  colors = generateRandomColors(numSquares);
   //pick color
   pickedColor = pickColor();
   //set title background equal to picked color
