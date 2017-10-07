@@ -24,6 +24,8 @@ easyBtn.addEventListener("click", function(){
   colors = generateRandomColors(3);
   //pick color
   pickedColor = pickColor();
+  //set title background equal to picked color
+  colorDisplay.textContent = pickedColor;
 
 });
 
