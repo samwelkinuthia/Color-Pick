@@ -26,7 +26,12 @@ easyBtn.addEventListener("click", function(){
   pickedColor = pickColor();
   //set title background equal to picked color
   colorDisplay.textContent = pickedColor;
-
+  //set new colors for 3 squares and hide the other three
+  for(var i=0; i < squares.length; i++){
+    if(colors[i]){
+      squares[i].style.background = colors[i]
+    }
+  }
 });
 
 
