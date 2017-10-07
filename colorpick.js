@@ -18,12 +18,13 @@ var hardBtn = document.querySelector("#hardBtn");
 
 //easy btn test
 easyBtn.addEventListener("click", function(){
+  hardBtn.classList.remove("selected");
   easyBtn.classList.add("selected");
 });
 
 
 hardBtn.addEventListener("click", function(){
-  alert("Clicked!");
+
 });
 
 
