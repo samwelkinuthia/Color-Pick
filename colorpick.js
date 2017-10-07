@@ -66,7 +66,7 @@ hardBtn.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {
   //generate all new colors
-  colors = generateRandomColors(6);
+  colors = generateRandomColors(numSquares);
   //pick a random color
   pickedColor = pickColor();
   //change color display to match picked color
