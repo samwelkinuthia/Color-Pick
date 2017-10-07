@@ -16,10 +16,15 @@ var resetButton = document.querySelector("#reset");
 var easyBtn = document.querySelector("#easyBtn");
 var hardBtn = document.querySelector("#hardBtn");
 
-//easy btn test
+//easy button behaviour
 easyBtn.addEventListener("click", function(){
   hardBtn.classList.remove("selected");
   easyBtn.classList.add("selected");
+  //generate 3 random colors
+  colors = generateRandomColors(3);
+  //pick color
+  pickedColor = pickColor();
+
 });
 
 
