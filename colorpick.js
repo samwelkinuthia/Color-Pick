@@ -1,5 +1,10 @@
+//checking game mode
+var numSquares = 6;
+
+
+
 //array of colours to be selected.
-var colors = generateRandomColors(6);
+var colors = generateRandomColors(numSquares);
 
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
@@ -35,7 +40,6 @@ easyBtn.addEventListener("click", function() {
     }
   }
   h1.style.background = "#f2f2f2";
-  resetButton.textContent = "New colors";
 });
 
 
@@ -54,7 +58,6 @@ hardBtn.addEventListener("click", function() {
     squares[i].style.display = "block";
   }
   h1.style.background = "#f2f2f2";
-  resetButton.textContent = "New colors";
 });
 
 
