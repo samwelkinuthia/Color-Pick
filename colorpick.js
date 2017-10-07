@@ -24,7 +24,8 @@ easyBtn.addEventListener("click", function(){
 
 
 hardBtn.addEventListener("click", function(){
-
+  hardBtn.classList.add("selected");
+  easyBtn.classList.remove("selected");
 });
 
 
