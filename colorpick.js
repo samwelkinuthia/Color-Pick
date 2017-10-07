@@ -34,6 +34,7 @@ easyBtn.addEventListener("click", function(){
       squares[i].style.display = "none";
     }
   }
+  h1.style.background = "#f2f2f2";
 });
 
 
