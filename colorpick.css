@@ -17,6 +17,8 @@ h1 {
 
 button{
   border:none;
+  background: none;
+  text-transform: uppercase;
 }
 
 #colorDisplay {
