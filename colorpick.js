@@ -25,6 +25,7 @@ for (var i = 0; i < modeButtons.length; i++) {
     modeButtons[0].classList.remove("selected");
     modeButtons[1].classList.remove("selected");
     this.classList.add("selected");
+    reset();
   });
 }
 //contains repetitive code
@@ -42,7 +43,7 @@ function reset() {
     squares[i].style.background = colors[i];
   }
   //reset header background-color
-  this.textContent = "New Colors";
+  resetButton.textContent = "New Colors";
   h1.style.background = "steelblue";
 }
 
