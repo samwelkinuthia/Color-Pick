@@ -22,7 +22,26 @@ init();
 function init() {
   //modeButtons event listeners
   setUpModeButtons();
+  //squares logic
+  setUpSquaresLogic();
   //loop for every color, set background as value of i.
+  reset();
+}
+//modeButtons
+function setUpModeButtons() {
+  for (var i = 0; i < modeButtons.length; i++) {
+    modeButtons[i].addEventListener("click", function() {
+      modeButtons[0].classList.remove("selected");
+      modeButtons[1].classList.remove("selected");
+      this.classList.add("selected");
+      this.textContent === "Easy" ? numSquares = 3 : numSquares = 6;
+      //calls the reset functon if easy or hard mode is selected
+      reset();
+    });
+  }
+}
+//squares Logic
+function setUpSquaresLogic() {
   for (var i = 0; i < squares.length; i++) {
     //initial colors
     // squares[i].style.background = colors[i] removed == reset function will do this.
@@ -40,20 +59,6 @@ function init() {
         this.style.background = "#232323";
         messageDisplay.textContent = "Try Again"
       }
-    });
-  }
-  reset();
-}
-
-function setUpModeButtons() {
-  for (var i = 0; i < modeButtons.length; i++) {
-    modeButtons[i].addEventListener("click", function() {
-      modeButtons[0].classList.remove("selected");
-      modeButtons[1].classList.remove("selected");
-      this.classList.add("selected");
-      this.textContent === "Easy" ? numSquares = 3 : numSquares = 6;
-      //calls the reset functon if easy or hard mode is selected
-      reset();
     });
   }
 }
