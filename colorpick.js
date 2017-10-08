@@ -40,7 +40,7 @@ easyBtn.addEventListener("click", function() {
       squares[i].style.display = "none";
     }
   }
-  h1.style.background = "#f2f2f2";
+  h1.style.background = "steelblue";
 });
 
 
@@ -59,7 +59,7 @@ hardBtn.addEventListener("click", function() {
     squares[i].style.background = colors[i]
     squares[i].style.display = "block";
   }
-  h1.style.background = "#f2f2f2";
+  h1.style.background = "steelblue";
 });
 
 
@@ -76,7 +76,7 @@ resetButton.addEventListener("click", function() {
     squares[i].style.background = colors[i];
   }
   //reset header background-color
-  h1.style.background = "#f2f2f2";
+  h1.style.background = "steelblue";
 })
 
 colorDisplay.textContent = pickedColor;
@@ -96,7 +96,7 @@ for (var i = 0; i < squares.length; i++) {
       h1.style.background = clickedColor;
       resetButton.textContent = "Play Again";
     } else {
-      this.style.background = "#f2f2f2";
+      this.style.background = "#232323";
       messageDisplay.textContent = "Try Again"
     }
   });
