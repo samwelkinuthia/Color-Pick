@@ -26,6 +26,11 @@ button{
   font-size: inherit;
 }
 
+button:hover{
+  color:white;
+  background: steelblue;
+}
+
 #message{
   display: inline-block;
   width: 20%;
@@ -56,5 +61,6 @@ button{
 }
 
 .selected {
-  background: blue;
+  color:white;
+  background: steelblue;
 }
