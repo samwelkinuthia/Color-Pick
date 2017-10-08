@@ -25,6 +25,8 @@ button{
   color:steelblue;
   font-size: inherit;
   transition: all .5s;
+  --webkit-transition: all .5s;
+  --moz-transition: all .5s;
 }
 
 button:hover{
