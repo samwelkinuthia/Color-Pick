@@ -42,6 +42,7 @@ function reset() {
   //change square colors
   for (var i = 0; i < squares.length; i++) {
     if(colors[i]){
+      squares[i].style.display = "block";
       squares[i].style.background = colors[i];
     } else{
       squares[i].style.display = "none";
