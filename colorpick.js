@@ -41,7 +41,11 @@ function reset() {
   messageDisplay.textContent = "";
   //change square colors
   for (var i = 0; i < squares.length; i++) {
-    squares[i].style.background = colors[i];
+    if(colors[i]){
+      squares[i].style.background = colors[i];
+    } else{
+      squares[i].style.display = "none";
+    }
   }
   //reset header background-color
   resetButton.textContent = "New Colors";
