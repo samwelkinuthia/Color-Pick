@@ -2,51 +2,57 @@
 body {
   background-color: #232323;
   margin: 0;
+  overflow-y: hidden;
   font-family: 'Georgia', sans-serif;
-  height:100vh;
+  height: 100vh;
 }
-.howto{
-  text-transform: lowercase;
+
+.howto {
   font-family: 'Raleway', sans-serif;
   font-size: 17px;
   font-weight: 400;
   cursor: pointer;
 }
-a{
+
+a {
   text-decoration: underline;
-  color:white;
-  font-weight:900;
+  color: white;
+  font-weight: 900;
 }
-.name{
-  font-size:40px;
+
+.name {
+  font-size: 40px;
   font-weight: bold;
   font-family: 'Passero One', cursive;
 }
+
+
 /*FOR MOBILE*/
 
 @media only screen and (max-width: 500px) {
-  body{
+  body {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
-  #container{
-    height:250px;
+  #container {
+    height: 250px;
   }
-  body .source a{
-    top:0;
-    position:relative;
+  body .source a {
+    top: 0;
+    position: relative;
     color: white;
   }
-  body h1{
+  body h1 {
     text-align: left;
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
   }
-  .name{
-    font-size:50px;
+  .name {
+    font-size: 50px;
     font-weight: bold;
-    font-family: 'Passero One',cursive;
+    font-family: 'Passero One', cursive;
   }
-  .howto{
+  .howto {
     text-transform: lowercase;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -67,7 +73,6 @@ h1 {
   text-align: center;
   color: white;
   background: steelblue;
-  text-transform: uppercase;
   margin: 0;
   font-size: 20px;
   font-weight: normal;
@@ -102,6 +107,7 @@ button:hover {
 }
 
 #colorDisplay {
+  text-transform: uppercase;
   font-size: 200%;
 }
 
@@ -133,14 +139,16 @@ button:hover {
   color: white;
   background: steelblue;
 }
-.source{
-  margin:0 auto;
+
+.source {
+  margin: 0 auto;
   position: fixed;
   bottom: 0;
-  color:#8c8c8c;
+  color: #8c8c8c;
   padding-top: 10px;
 }
-.source a{
-  color:#8c8c8c;
-  margin-right:10px;
+
+.source a {
+  color: #8c8c8c;
+  margin-right: 10px;
 }
