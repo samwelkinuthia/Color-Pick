@@ -3,7 +3,60 @@ body {
   background-color: #232323;
   margin: 0;
   font-family: 'Georgia', sans-serif;
+  height:100vh;
 }
+.howto{
+  text-transform: lowercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+}
+a{
+  text-decoration: underline;
+  color:white;
+  font-weight:900;
+}
+.name{
+  font-size:40px;
+  font-weight: bold;
+  font-family: 'Passero One', cursive;
+}
+/*FOR MOBILE*/
+
+@media only screen and (max-width: 500px) {
+  body{
+    overflow-x: hidden;
+  }
+  #container{
+    height:250px;
+  }
+  body .source a{
+    top:0;
+    position:relative;
+    color: white;
+  }
+  body h1{
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+  }
+  .name{
+    font-size:50px;
+    font-weight: bold;
+    font-family: 'Passero One',cursive;
+  }
+  .howto{
+    text-transform: lowercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+
+/*end*/
 
 #container {
   margin: 20px auto;
@@ -16,6 +69,7 @@ h1 {
   background: steelblue;
   text-transform: uppercase;
   margin: 0;
+  font-size: 20px;
   font-weight: normal;
   line-height: 1.1;
   padding: 20px 0;
@@ -25,6 +79,7 @@ button {
   border: none;
   background: none;
   text-transform: uppercase;
+  font-family: 'Passero One', cursive;
   height: 100%;
   font-weight: 700;
   letter-spacing: 1px;
@@ -60,7 +115,7 @@ button:hover {
   float: left;
   margin: 1.5%;
   width: 30%;
-  border-radius: 15%;
+  border-radius: 17%;
   background: red;
   transition: background .6s;
   --webkit-transition: background .6s;
@@ -77,4 +132,15 @@ button:hover {
 .selected {
   color: white;
   background: steelblue;
+}
+.source{
+  margin:0 auto;
+  position: fixed;
+  bottom: 0;
+  color:#8c8c8c;
+  padding-top: 10px;
+}
+.source a{
+  color:#8c8c8c;
+  margin-right:10px;
 }
