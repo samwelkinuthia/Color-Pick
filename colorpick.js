@@ -97,7 +97,7 @@ function reset() {
 
 
 resetButton.addEventListener("click", function() {
-
+  reset();
 })
 
 colorDisplay.textContent = pickedColor;
