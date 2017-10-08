@@ -26,6 +26,11 @@ button{
   font-size: inherit;
 }
 
+#message{
+  display: inline-block;
+  width: 20%;
+}
+
 #colorDisplay {
   font-size: 200%;
 }
