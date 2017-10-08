@@ -1,17 +1,24 @@
 body {
   background-color: #232323;
-  margin:0;
+  margin: 0;
   font-family: 'Georgia', sans-serif;
 }
 
-
-h1{
+h1 {
   text-align: center;
   color: white;
   background: steelblue;
   text-transform: uppercase;
-  margin:0;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+  padding: 20px 0;
 }
+
+#colorDisplay {
+  font-size: 200%;
+}
+
 .container {
   margin: 0 auto;
   max-width: 600px;
@@ -32,6 +39,6 @@ h1{
   padding: 5px;
 }
 
-.selected{
+.selected {
   background: blue;
 }
