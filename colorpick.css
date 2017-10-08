@@ -24,6 +24,7 @@ button{
   letter-spacing: 1px;
   color:steelblue;
   font-size: inherit;
+  transition: all 2.0;
 }
 
 button:hover{
