@@ -1,11 +1,7 @@
 //checking game mode
 var numSquares = 6;
-
-
-
 //array of colours to be selected.
 var colors = generateRandomColors(numSquares);
-
 //selecting all six colours defined in var colors.
 var squares = document.querySelectorAll(".square");
 //set picked color.
@@ -20,12 +16,19 @@ var resetButton = document.querySelector("#reset");
 //easy and hard buttons
 var modeButtons = document.querySelectorAll(".mode");
 
+//init function, runs on page load
+init();
+
+
+
+//loop for modeButtons
 for (var i = 0; i < modeButtons.length; i++) {
   modeButtons[i].addEventListener("click", function() {
     modeButtons[0].classList.remove("selected");
     modeButtons[1].classList.remove("selected");
     this.classList.add("selected");
     this.textContent === "Easy" ? numSquares = 3 : numSquares = 6;
+    //calls the reset functon if easy or hard mode is selected
     reset();
   });
 }
@@ -52,49 +55,6 @@ function reset() {
   resetButton.textContent = "New Colors";
   h1.style.background = "steelblue";
 }
-
-//easy button behaviour
-// easyBtn.addEventListener("click", function() {
-//   hardBtn.classList.remove("selected");
-//   easyBtn.classList.add("selected");
-//   //generate 3 random colors
-//   numSquares = 3;
-//   colors = generateRandomColors(numSquares);
-//   //pick color
-//   pickedColor = pickColor();
-//   //set title background equal to picked color
-//   colorDisplay.textContent = pickedColor;
-//   //set new colors for 3 squares and hide the other three
-//   for (var i = 0; i < squares.length; i++) {
-//     if (colors[i]) {
-//       squares[i].style.background = colors[i]
-//     } else {
-//       squares[i].style.display = "none";
-//     }
-//   }
-//   h1.style.background = "steelblue";
-// });
-//
-//
-// hardBtn.addEventListener("click", function() {
-//   hardBtn.classList.add("selected");
-//   easyBtn.classList.remove("selected");
-//   //generate 6 random colors
-//   numSquares = 6;
-//   colors = generateRandomColors(numSquares);
-//   //pick color
-//   pickedColor = pickColor();
-//   //set title background equal to picked color
-//   colorDisplay.textContent = pickedColor;
-//   //set new colors for 3 squares and hide the other three
-//   for (var i = 0; i < squares.length; i++) {
-//     squares[i].style.background = colors[i]
-//     squares[i].style.display = "block";
-//   }
-//   h1.style.background = "steelblue";
-// });
-//
-
 
 resetButton.addEventListener("click", function() {
   reset();
@@ -163,3 +123,47 @@ function randomColor() {
   return "rgb(" + r + ", " + g + ", " + b + ")";
 
 }
+
+
+//=============================================BEFORE REFACTORING=======================================================///
+//easy button behaviour
+// easyBtn.addEventListener("click", function() {
+//   hardBtn.classList.remove("selected");
+//   easyBtn.classList.add("selected");
+//   //generate 3 random colors
+//   numSquares = 3;
+//   colors = generateRandomColors(numSquares);
+//   //pick color
+//   pickedColor = pickColor();
+//   //set title background equal to picked color
+//   colorDisplay.textContent = pickedColor;
+//   //set new colors for 3 squares and hide the other three
+//   for (var i = 0; i < squares.length; i++) {
+//     if (colors[i]) {
+//       squares[i].style.background = colors[i]
+//     } else {
+//       squares[i].style.display = "none";
+//     }
+//   }
+//   h1.style.background = "steelblue";
+// });
+//
+//
+// hardBtn.addEventListener("click", function() {
+//   hardBtn.classList.add("selected");
+//   easyBtn.classList.remove("selected");
+//   //generate 6 random colors
+//   numSquares = 6;
+//   colors = generateRandomColors(numSquares);
+//   //pick color
+//   pickedColor = pickColor();
+//   //set title background equal to picked color
+//   colorDisplay.textContent = pickedColor;
+//   //set new colors for 3 squares and hide the other three
+//   for (var i = 0; i < squares.length; i++) {
+//     squares[i].style.background = colors[i]
+//     squares[i].style.display = "block";
+//   }
+//   h1.style.background = "steelblue";
+// });
+//
