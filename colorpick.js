@@ -55,7 +55,7 @@ function setUpSquaresLogic() {
         changeColors(clickedColor);
         h1.style.background = clickedColor;
         resetButton.textContent = "Play Again?";
-        messageDisplay.style.cssText = "color:#00cc00;font-size:20px;font-weight:600;";
+        messageDisplay.style.cssText = "color:#00cc00;font-size:16px;font-weight:600;";
       } else {
         this.style.background = "#232323";
         messageDisplay.textContent = "Wrong";
