@@ -20,13 +20,32 @@ var resetButton = document.querySelector("#reset");
 //easy and hard buttons
 var modeButtons = document.querySelectorAll(".mode");
 
-for(var i =0; i < modeButtons.length; i++){
-  modeButtons[i].addEventListener("click", function(){
+for (var i = 0; i < modeButtons.length; i++) {
+  modeButtons[i].addEventListener("click", function() {
     modeButtons[0].classList.remove("selected");
     modeButtons[1].classList.remove("selected");
     this.classList.add("selected");
-  })
+  });
 }
+//contains repetitive code
+function reset() {
+  //generate all new colors
+  colors = generateRandomColors(numSquares);
+  //pick a random color
+  pickedColor = pickColor();
+  //change color display to match picked color
+  colorDisplay.textContent = pickedColor;
+  //change textContent to nil afer previous result
+  messageDisplay.textContent = "";
+  //change square colors
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.background = colors[i];
+  }
+  //reset header background-color
+  this.textContent = "New Colors";
+  h1.style.background = "steelblue";
+}
+
 //easy button behaviour
 // easyBtn.addEventListener("click", function() {
 //   hardBtn.classList.remove("selected");
@@ -71,21 +90,7 @@ for(var i =0; i < modeButtons.length; i++){
 
 
 resetButton.addEventListener("click", function() {
-  //generate all new colors
-  colors = generateRandomColors(numSquares);
-  //pick a random color
-  pickedColor = pickColor();
-  //change color display to match picked color
-  colorDisplay.textContent = pickedColor;
-  //change textContent to nil afer previous result
-  messageDisplay.textContent = "";
-  //change square colors
-  for (var i = 0; i < squares.length; i++) {
-    squares[i].style.background = colors[i];
-  }
-  //reset header background-color
-  this.textContent = "New Colors";
-  h1.style.background = "steelblue";
+
 })
 
 colorDisplay.textContent = pickedColor;
