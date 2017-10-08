@@ -55,9 +55,11 @@ function setUpSquaresLogic() {
         changeColors(clickedColor);
         h1.style.background = clickedColor;
         resetButton.textContent = "Play Again?";
+        messageDisplay.style.cssText = "color:#00e600;font-size:23px;font-weight:bold; font-family:Baloo Thambi, cursive; ";
       } else {
         this.style.background = "#232323";
-        messageDisplay.textContent = "Try Again"
+        messageDisplay.textContent = "Try Again";
+        messageDisplay.style.cssText = "color: red; font-size:20px;font-weight:600;";
       }
     });
   }
