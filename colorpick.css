@@ -4,6 +4,11 @@ body {
   font-family: 'Georgia', sans-serif;
 }
 
+.container {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
 h1 {
   text-align: center;
   color: white;
@@ -15,26 +20,26 @@ h1 {
   padding: 20px 0;
 }
 
-button{
-  border:none;
+button {
+  border: none;
   background: none;
   text-transform: uppercase;
-  height:100%;
+  height: 100%;
   font-weight: 700;
   letter-spacing: 1px;
-  color:steelblue;
+  color: steelblue;
   font-size: inherit;
   transition: all .5s;
   --webkit-transition: all .5s;
   --moz-transition: all .5s;
 }
 
-button:hover{
-  color:white;
+button:hover {
+  color: white;
   background: steelblue;
 }
 
-#message{
+#message {
   display: inline-block;
   width: 20%;
 }
@@ -51,7 +56,7 @@ button:hover{
 .square {
   padding-bottom: 30%;
   float: left;
-  margin:1.5%;
+  margin: 1.5%;
   width: 30%;
   border-radius: 15%;
   background: red;
@@ -64,10 +69,10 @@ button:hover{
   background-color: white;
   height: 30px;
   text-align: center;
-  color:black;
+  color: black;
 }
 
 .selected {
-  color:white;
+  color: white;
   background: steelblue;
 }
