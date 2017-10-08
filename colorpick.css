@@ -20,6 +20,9 @@ button{
   background: none;
   text-transform: uppercase;
   height:100%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color:steelblue;
 }
 
 #colorDisplay {
