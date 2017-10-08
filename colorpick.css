@@ -1,6 +1,7 @@
 body {
   background-color: #232323;
   margin:0;
+  font-family: 'Georgia', sans-serif;
 }
 
 
@@ -8,6 +9,7 @@ h1{
   text-align: center;
   color: white;
   background: steelblue;
+  text-transform: uppercase;
   margin:0;
 }
 .container {
