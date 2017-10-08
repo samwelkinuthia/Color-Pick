@@ -1,7 +1,13 @@
 body {
-  background-color: #f2f2f2;
+  background-color: #232323;
 }
 
+
+h1{
+  text-align: center;
+  color: white;
+  background: steelblue;
+}
 .container {
   margin: 0 auto;
   max-width: 600px;
