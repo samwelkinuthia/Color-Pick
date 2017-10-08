@@ -18,9 +18,7 @@ var h1 = document.getElementById("title");
 //event listener for reset button
 var resetButton = document.querySelector("#reset");
 //easy and hard buttons
-var easyBtn = document.querySelector("#easyBtn");
-var hardBtn = document.querySelector("#hardBtn");
-
+var modeButtons = document.querySelectorAll(".mode");
 //easy button behaviour
 easyBtn.addEventListener("click", function() {
   hardBtn.classList.remove("selected");
