@@ -49,9 +49,10 @@ button:hover{
 .square {
   padding-bottom: 30%;
   float: left;
-  margin: 5px;
+  margin:1.5%;
   width: 30%;
-  background-color: red;
+  border-radius: 15%;
+  background: red;
 }
 
 #stripe {
