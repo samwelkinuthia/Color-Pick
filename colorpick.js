@@ -58,7 +58,7 @@ function setUpSquaresLogic() {
         messageDisplay.style.cssText = "color:#00cc00;font-size:20px;font-weight:600;";
       } else {
         this.style.background = "#232323";
-        messageDisplay.textContent = "Try Again";
+        messageDisplay.textContent = "Wrong";
         messageDisplay.style.cssText = "color: red; font-size:20px;font-weight:600;";
       }
     });
