@@ -15,6 +15,8 @@ var h1 = document.getElementById("title");
 var resetButton = document.querySelector("#reset");
 //easy and hard buttons
 var modeButtons = document.querySelectorAll(".mode");
+//click counter functionality
+var clickBtn = document.getElementById("clicks");
 
 //init function, runs on page load
 init();
@@ -46,7 +48,10 @@ function setUpSquaresLogic() {
     //initial colors
     // squares[i].style.background = colors[i] removed == reset function will do this.
     // //click listeners for click event
+    count = 0;
     squares[i].addEventListener("click", function() {
+      count += 1;
+      clickBtn.textContent = count + " Clicks!";
       //grab the color of the clicked square
       var clickedColor = this.style.background;
       //compare to pickedColor
