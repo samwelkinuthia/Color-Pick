@@ -5,6 +5,8 @@ A simple color guessing game where you try to guess a color based on it's RGB (R
 
 Try it out. [Demo](https://samwelkinuthia.github.io/Color-Pick/)
 
+[![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+
 # How to Play
 
 When the page loads, you see an rgb value and 6 color squares. One of the squares has the color displayed in the RGB value.
