@@ -1,5 +1,8 @@
-# Color Pick
+![Logo](img/logo2.png)
+
+
 A simple color guessing game where you try to guess a color based on it's RGB (Red, Green, Blue) value.
+
 Try it out. [Demo](https://samwelkinuthia.github.io/Color-Pick/)
 
 # How to Play
