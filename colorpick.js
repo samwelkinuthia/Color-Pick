@@ -44,14 +44,12 @@ function setUpModeButtons() {
 }
 //squares Logic
 function setUpSquaresLogic() {
+  // limit()
   for (var i = 0; i < squares.length; i++) {
     //initial colors
     // squares[i].style.background = colors[i] removed == reset function will do this.
     // //click listeners for click event
-    count = 0;
     squares[i].addEventListener("click", function() {
-      count += 1;
-      clickBtn.textContent = count + " Clicks!";
       //grab the color of the clicked square
       var clickedColor = this.style.background;
       //compare to pickedColor
@@ -66,6 +64,16 @@ function setUpSquaresLogic() {
         messageDisplay.textContent = "Wrong";
         messageDisplay.style.cssText = "color: red; font-size:17px;font-weight:600;";
       }
+    });
+  }
+}
+//squares Logic
+function limit() {
+  for (var i = 0; i < squares.length; i++) {
+    count = 0
+    squares[i].addEventListener("click", function() {
+      count += 1
+      console.log(count)
     });
   }
 }
