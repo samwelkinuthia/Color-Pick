@@ -145,7 +145,8 @@ button:hover {
   position: fixed;
   bottom: 0;
   color: #8c8c8c;
-  padding-top: 10px;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .source a {

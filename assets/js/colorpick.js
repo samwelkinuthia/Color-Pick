@@ -15,6 +15,8 @@ var h1 = document.getElementById("title");
 var resetButton = document.querySelector("#reset");
 //easy and hard buttons
 var modeButtons = document.querySelectorAll(".mode");
+//click counter functionality
+var clickBtn = document.getElementById("clicks");
 
 //init function, runs on page load
 init();
@@ -42,6 +44,7 @@ function setUpModeButtons() {
 }
 //squares Logic
 function setUpSquaresLogic() {
+  // limit()
   for (var i = 0; i < squares.length; i++) {
     //initial colors
     // squares[i].style.background = colors[i] removed == reset function will do this.
@@ -61,6 +64,16 @@ function setUpSquaresLogic() {
         messageDisplay.textContent = "Wrong";
         messageDisplay.style.cssText = "color: red; font-size:17px;font-weight:600;";
       }
+    });
+  }
+}
+//squares Logic
+function limit() {
+  for (var i = 0; i < squares.length; i++) {
+    count = 0
+    squares[i].addEventListener("click", function() {
+      count += 1
+      console.log(count)
     });
   }
 }
@@ -178,3 +191,7 @@ function randomColor() {
 //   h1.style.background = "steelblue";
 // });
 //
+
+$('.instructions').click(function(){
+  $('body').chardinJs('start');
+});
