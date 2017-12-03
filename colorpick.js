@@ -192,6 +192,6 @@ function randomColor() {
 // });
 //
 
-$('#inst').click(function(){
+$('.instructions').click(function(){
   $('body').chardinJs('start');
 });
