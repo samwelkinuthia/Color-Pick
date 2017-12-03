@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .chardinjs-overlay {
   position: absolute;
   z-index: 999999;
@@ -32,6 +33,7 @@
     padding-top: 10px; }
 
 .chardinjs-tooltip {
+  font-family: 'Open Sans', serif;
   position: absolute;
   -webkit-transition: opacity 0.1s ease-out;
   -moz-transition: opacity 0.1s ease-out;
