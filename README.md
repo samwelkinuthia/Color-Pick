@@ -6,20 +6,20 @@ Try it out. [Demo](https://samwelkinuthia.github.io/Color-Pick/)
 
 When the page loads, you see an rgb value and 6 color squares. One of the squares has the color displayed in the RGB value.
 
-![Landing](img/landing.png)
+![Landing](assets/img/landing.png)
 
 Lets try our luck by clicking square.
 
 #### oops.. Wrong color
 
-![wrong](img/wrong.png)
+![wrong](assets/img/wrong.png)
 
 When a wrong color is clicked, the square disappears and a red ugly WRONG is shown.
 Clicking wrong squares causes them to disapper but clicking on the right one does something interesting..
 
 #### yaay..We got it right!
 
-![correct](img/correct.png)
+![correct](assets/img/correct.png)
 
 All squares reappear and change color to the right color, the title background changes color as well.
 
@@ -27,7 +27,7 @@ All squares reappear and change color to the right color, the title background c
 
 The default mode is the hard mode with six squares. The easy mode however, reduces the number to three.
 
-![easy](img/easy.png)
+![easy](assets/img/easy.png)
 
 Enjoy!! :smile:
 
@@ -42,8 +42,13 @@ Enjoy!! :smile:
 * Navigate to the Download path via ``` cd Downloads/Color-Pick```.
 * Right click on  ``` index.html ``` and select ```Open in Browser``` .
 
-### Known Bugs
-Text overflow issues on Mobile,.. will Update when fixed.
+### To Do
+
+* 100% mobile responsitivity
+* Limit the number of clicks.. probably to 1 to mess people up. :smiling_imp:
+* 15 second timer to further mess people up. :smiling_imp: :smiling_imp:
+* CORDOVA!!!!
+
 
 # License
 Contents of this repo are bound by the MIT license.
