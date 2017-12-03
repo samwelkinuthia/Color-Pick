@@ -191,3 +191,7 @@ function randomColor() {
 //   h1.style.background = "steelblue";
 // });
 //
+
+$('#inst').click(function(){
+  $('body').chardinJs('start');
+});
