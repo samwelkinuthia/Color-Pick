@@ -14,24 +14,23 @@
 <body>
   <h1 id="title">
     <span class="name">COLORPICK</span><br>
-    <span class="howto">Pick a color equal to the RGB value given. R is the amount of red, G the amount of green and B the amount of Blue. <a href="https://en.wikipedia.org/wiki/RGB_color_model" target="_blank">Learn more..</a></span> <br><br>
-    <p id="inst">How to play?</p>
-    <span id="colorDisplay">RGB</span></h1>
+    <span class="howto">Pick a color equal to the RGB value given. R is the amount of red, G the amount of green and B the amount of Blue. <a class="instructions">How to Play?</a></span><br>
+    <span id="colorDisplay" data-intro="The three digits are the relative amounts of Red Green and Blue. One of the squares below is made from this combination." data-position="left">RGB</span></h1>
   <div id="stripe">
     <span id="clicks"></span>
     <button id="reset">New colors</button>
     <span id="message" class="animated infinite pulse"></span>
-    <button class="mode" data-intro="If you have balls approaching zero and the likes.. choose this mode." data-position="right">Easy</button>
+    <button class="mode">Easy</button>
     <button class="mode selected">Hard</button>
   </div>
   <div id="container">
     <div class="square"></div>
+    <div class="square" ></div>
+    <div class="square" data-intro="One of these squares matches the RGB combination above. Find it to win!" data-position="right"></div>
     <div class="square"></div>
     <div class="square"></div>
     <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <p class="source"><a href="https://github.com/samwelkinuthia/Color-Pick" target="_blank">source code</a><a href="https://kinuthia.herokuapp.com/" target="_blank">Author</a></p>
+    <p class="source">Made for fun, by <a href="https://samwelkinuthia.github.io" target="_blank">Es Kay</a></p>
   </div>
   <script src="jquery.js"></script>
   <script src="chardinjs.js"></script>
