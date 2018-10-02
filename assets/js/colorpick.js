@@ -16,7 +16,7 @@ var resetButton = document.querySelector("#reset");
 //easy and hard buttons
 var modeButtons = document.querySelectorAll(".mode");
 //click counter functionality
-var clickBtn = document.getElementById("clicks");
+// var clickBtn = document.getElementById("clicks");
 
 //init function, runs on page load
 init();
@@ -68,15 +68,15 @@ function setUpSquaresLogic() {
   }
 }
 //squares Logic
-function limit() {
-  for (var i = 0; i < squares.length; i++) {
-    count = 0
-    squares[i].addEventListener("click", function() {
-      count += 1
-      console.log(count)
-    });
-  }
-}
+// function limit() {
+//   for (var i = 0; i < squares.length; i++) {
+//     count = 0
+//     squares[i].addEventListener("click", function() {
+//       count += 1
+//       console.log(count)
+//     });
+//   }
+// }
 
 //contains repetitive code
 function reset() {
