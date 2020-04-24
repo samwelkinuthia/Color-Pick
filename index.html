@@ -1,39 +1,26 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/colorpick.css">
-  <link rel="shortcut icon" href="assets/img/icon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link href="assets/css/chardinjs.css" rel="stylesheet">
-  <title>ColorPick</title>
-</head>
-
-<body>
-  <h1 id="title">
-    <span class="name">COLORPICK</span><br>
-    <span class="howto">Pick a color equal to the RGB value given. R is the amount of red, G the amount of green and B the amount of Blue. <a class="instructions">How to Play?</a></span><br>
-    <span id="colorDisplay" data-intro="The three digits are the relative amounts of Red Green and Blue. One of the squares below is made from this combination." data-position="left">RGB</span></h1>
-  <div id="stripe">
-    <button id="reset">New colors</button>
-    <span id="message" class="animated infinite pulse"></span>
-    <button class="mode">Easy</button>
-    <button class="mode selected">Hard</button>
-  </div>
-  <div id="container">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square" data-intro="One of these squares matches the RGB combination above. Find it to win!" data-position="right"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <p class="source">Made for fun, by <a href="https://samwel.surge.sh" target="_blank">Es Kay</a></p>
-  </div>
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/chardinjs.js"></script>
-  <script type="text/javascript" src="assets/js/colorpick.js"></script>
-</body>
-
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/master.css">
+  </head>
+  <body>
+    <div class="top">
+      <h1>Target: <span id="colorDisp">RGB</span></h1>
+      <span id="message"></span>
+    </div>
+    <div id="container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+    <script type="text/javascript" src="assets/js/colorpick.js"></script>
+  </body>
 </html>
