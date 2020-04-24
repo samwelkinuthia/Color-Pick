@@ -1,17 +1,6 @@
-let colors = [
-  "rgb(240, 0, 0)",
-  "rgb(210, 0, 0)",
-  "rgb(100, 0, 0)",
-  "rgb(123, 0, 0)",
-  "rgb(10, 0, 0)",
-  "rgb(255, 0, 0)",
-  "rgb(68, 0, 0)",
-  "rgb(193, 0, 0)",
-  "rgb(211, 0, 0)"
-];
-
+let colors = generateColors(6);
 let squares = document.querySelectorAll(".square");
-let pickedColor = colors[4];
+let pickedColor = pickColor();
 let colorDisp = document.getElementById("colorDisp");
 let message = document.querySelector("#message");
 
@@ -23,9 +12,38 @@ for (let i = 0; i < squares.length; i++) {
     let clickedColor = this.style.background;
     if (clickedColor === pickedColor) {
       message.textContent = "Correct";
+      changeColors(clickedColor);
     } else {
       this.style.background = "white";
       message.textContent = "Wrong";
     }
   })
+}
+
+function changeColors(color) {
+    for (let i = 0; i < squares.length; i++) {
+      squares[i].style.background = color;
+    }
+}
+
+function pickColor() {
+  let random = Math.floor(Math.random() * colors.length);
+  return colors[random];
+}
+
+function generateColors(number) {
+  let arr = [];
+  
+  for (let i = 0; i < number; i++) {
+    randomGen()
+  }
+  
+  return arr;
+}
+
+function randomGen() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
 }
