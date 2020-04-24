@@ -1,19 +1,26 @@
-let colors = generateColors(9);
+let numSquares = 6;
+let colors = generateColors(numSquares);
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
 let colorDisp = document.getElementById("colorDisp");
 let message = document.querySelector("#message");
 let topDiv = document.getElementById("top");
 let reset = document.getElementById("reset");
-let easyBtn = document.querySelector("#easyBtn");
-let hardBtn = document.querySelector("#hardBtn");
-let godBtn = document.querySelector("#godBtn");
+let modeBtns = document.querySelectorAll(".mode");
+
+// for (let i =0; i < modeBtns.length; i++) {
+//   modeBtns[i].addEventListener('click', () => {
+//     modeBtns[0].classList.remove("selected");
+//     this.classList.add("selected");
+//   })
+// }
 
 easyBtn.addEventListener('click', () => {
   easyBtn.classList.add("selected");
   hardBtn.classList.remove("selected");
   godBtn.classList.remove("selected");
-  colors = generateColors(3);
+  numSquares = 3;
+  colors = generateColors(numSquares);
   pickedColor = pickColor();
   colorDisp.textContent = pickedColor;
   for (let i = 0; i < squares.length; i++) {
@@ -29,7 +36,8 @@ hardBtn.addEventListener('click', () => {
   hardBtn.classList.add("selected");
   easyBtn.classList.remove("selected");
   godBtn.classList.remove("selected");
-  colors = generateColors(6);
+  numSquares = 6;
+  colors = generateColors(numSquares);
   pickedColor = pickColor();
   colorDisp.textContent = pickedColor;
   for (let i = 0; i < squares.length; i++) {
@@ -46,7 +54,8 @@ godBtn.addEventListener('click', () => {
   godBtn.classList.add("selected");
   hardBtn.classList.remove("selected");
   easyBtn.classList.remove("selected");
-  colors = generateColors(9);
+  numSquares = 9;
+  colors = generateColors(numSquares);
   pickedColor = pickColor();
   colorDisp.textContent = pickedColor;
   for (let i = 0; i < squares.length; i++) {
@@ -58,9 +67,11 @@ godBtn.addEventListener('click', () => {
 
 
 reset.addEventListener('click', () => {
-  colors = generateColors(9);
+  colors = generateColors(numSquares);
   pickedColor = pickColor();
   colorDisp.textContent = pickedColor;
+  message.textContent = "";
+  reset.textContent = "New Colors";
   for (let i = 0; i < squares.length; i++) {
     squares[i].style.background = colors[i];
     squares[i].addEventListener('click', function() {
@@ -80,9 +91,13 @@ reset.addEventListener('click', () => {
 });
 
 colorDisp.textContent = pickedColor;
-
+let count = 0;
 for (let i = 0; i < squares.length; i++) {
-  squares[i].style.background = colors[i];
+  if (colors[i]) {
+    squares[i].style.background = colors[i];
+  } else {
+    squares[i].style.display = "none";
+  }
   squares[i].addEventListener('click', function() {
     let clickedColor = this.style.background;
     if (clickedColor === pickedColor) {

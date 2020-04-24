@@ -18,3 +18,7 @@ body {
 .selected {
   background: grey;
 }
+
+button {
+  outline: none;
+}
