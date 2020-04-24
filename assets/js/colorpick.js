@@ -1,9 +1,9 @@
-let colors = generateColors(6);
+let colors = generateColors(9);
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
 let colorDisp = document.getElementById("colorDisp");
 let message = document.querySelector("#message");
-
+let topDiv = document.getElementById("top");
 colorDisp.textContent = pickedColor;
 
 for (let i = 0; i < squares.length; i++) {
@@ -13,6 +13,7 @@ for (let i = 0; i < squares.length; i++) {
     if (clickedColor === pickedColor) {
       message.textContent = "Correct";
       changeColors(clickedColor);
+      topDiv.style.background = pickedColor;
     } else {
       this.style.background = "white";
       message.textContent = "Wrong";
@@ -33,11 +34,9 @@ function pickColor() {
 
 function generateColors(number) {
   let arr = [];
-  
   for (let i = 0; i < number; i++) {
-    randomGen()
+    arr.push(randomGen());
   }
-  
   return arr;
 }
 
