@@ -8,62 +8,64 @@ let topDiv = document.getElementById("top");
 let reset = document.getElementById("reset");
 let modeBtns = document.querySelectorAll(".mode");
 
-// for (let i =0; i < modeBtns.length; i++) {
-//   modeBtns[i].addEventListener('click', () => {
-//     modeBtns[0].classList.remove("selected");
-//     this.classList.add("selected");
-//   })
-// }
-
-easyBtn.addEventListener('click', () => {
-  easyBtn.classList.add("selected");
-  hardBtn.classList.remove("selected");
-  godBtn.classList.remove("selected");
-  numSquares = 3;
-  colors = generateColors(numSquares);
-  pickedColor = pickColor();
-  colorDisp.textContent = pickedColor;
-  for (let i = 0; i < squares.length; i++) {
-    if (colors[i]) {
-      squares[i].style.background = colors[i];
-    } else {
-      squares[i].style.display = "none";
-    }
-  }
-});
-
-hardBtn.addEventListener('click', () => {
-  hardBtn.classList.add("selected");
-  easyBtn.classList.remove("selected");
-  godBtn.classList.remove("selected");
-  numSquares = 6;
-  colors = generateColors(numSquares);
-  pickedColor = pickColor();
-  colorDisp.textContent = pickedColor;
-  for (let i = 0; i < squares.length; i++) {
-    if (colors[i]) {
-      squares[i].style.background = colors[i];
-      squares[i].style.display = "block";
-    } else {
-      squares[i].style.display = "none";
-    }
-  }
-});
-
-godBtn.addEventListener('click', () => {
-  godBtn.classList.add("selected");
-  hardBtn.classList.remove("selected");
-  easyBtn.classList.remove("selected");
-  numSquares = 9;
-  colors = generateColors(numSquares);
-  pickedColor = pickColor();
-  colorDisp.textContent = pickedColor;
-  for (let i = 0; i < squares.length; i++) {
-      squares[i].style.background = colors[i];
-      squares[i].style.display = "block";
-  }
-});
-
+for (let i =0; i < modeBtns.length; i++) {
+  modeBtns[i].addEventListener('click', () => {
+    modeBtns[0].classList.remove("selected");
+    modeBtns[1].classList.remove("selected");
+    modeBtns[2].classList.remove("selected");
+    modeBtns[i].classList.add("selected");
+  })
+}
+//
+// easyBtn.addEventListener('click', () => {
+//   easyBtn.classList.add("selected");
+//   hardBtn.classList.remove("selected");
+//   godBtn.classList.remove("selected");
+//   numSquares = 3;
+//   colors = generateColors(numSquares);
+//   pickedColor = pickColor();
+//   colorDisp.textContent = pickedColor;
+//   for (let i = 0; i < squares.length; i++) {
+//     if (colors[i]) {
+//       squares[i].style.background = colors[i];
+//     } else {
+//       squares[i].style.display = "none";
+//     }
+//   }
+// });
+//
+// hardBtn.addEventListener('click', () => {
+//   hardBtn.classList.add("selected");
+//   easyBtn.classList.remove("selected");
+//   godBtn.classList.remove("selected");
+//   numSquares = 6;
+//   colors = generateColors(numSquares);
+//   pickedColor = pickColor();
+//   colorDisp.textContent = pickedColor;
+//   for (let i = 0; i < squares.length; i++) {
+//     if (colors[i]) {
+//       squares[i].style.background = colors[i];
+//       squares[i].style.display = "block";
+//     } else {
+//       squares[i].style.display = "none";
+//     }
+//   }
+// });
+//
+// godBtn.addEventListener('click', () => {
+//   godBtn.classList.add("selected");
+//   hardBtn.classList.remove("selected");
+//   easyBtn.classList.remove("selected");
+//   numSquares = 9;
+//   colors = generateColors(numSquares);
+//   pickedColor = pickColor();
+//   colorDisp.textContent = pickedColor;
+//   for (let i = 0; i < squares.length; i++) {
+//       squares[i].style.background = colors[i];
+//       squares[i].style.display = "block";
+//   }
+// });
+//
 
 
 reset.addEventListener('click', () => {
