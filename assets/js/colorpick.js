@@ -5,7 +5,7 @@ let pickedColor = pickColor();
 let colorDisp = document.getElementById("colorDisp");
 let message = document.querySelector("#message");
 let topDiv = document.getElementById("top");
-let reset = document.getElementById("reset");
+let resetButton = document.getElementById("resetButton");
 let modeBtns = document.querySelectorAll(".mode");
 
 for (let i =0; i < modeBtns.length; i++) {
@@ -14,9 +14,35 @@ for (let i =0; i < modeBtns.length; i++) {
     modeBtns[1].classList.remove("selected");
     modeBtns[2].classList.remove("selected");
     modeBtns[i].classList.add("selected");
+    if(modeBtns[i].textContent === "Easy") {
+      numSquares = 3;
+    } else if (modeBtns[i].textContent === "Hard") {
+      numSquares = 6;
+    } else if (modeBtns[i].textContent === "God") {
+      numSquares = 9;
+    }
+    reset()
+    
   })
 }
-//
+
+function reset() {
+  colors = generateColors(numSquares);
+  pickedColor = pickColor();
+  colorDisp.textContent = pickedColor;
+  message.textContent = "";
+  resetButton.textContent = "New Colors";
+  
+  for (let i = 0; i < squares.length; i++) {
+    if (colors[i]) {
+      squares[i].style.display = "block";
+      squares[i].style.background = colors[i];
+    } else {
+      squares[i].style.display = "none";
+    }
+  }
+  topDiv.style.background = "white";
+};
 // easyBtn.addEventListener('click', () => {
 //   easyBtn.classList.add("selected");
 //   hardBtn.classList.remove("selected");
@@ -68,12 +94,12 @@ for (let i =0; i < modeBtns.length; i++) {
 //
 
 
-reset.addEventListener('click', () => {
+resetButton.addEventListener('click', () => {
   colors = generateColors(numSquares);
   pickedColor = pickColor();
   colorDisp.textContent = pickedColor;
   message.textContent = "";
-  reset.textContent = "New Colors";
+  resetButton.textContent = "New Colors";
   for (let i = 0; i < squares.length; i++) {
     squares[i].style.background = colors[i];
     squares[i].addEventListener('click', function() {
@@ -82,7 +108,7 @@ reset.addEventListener('click', () => {
         message.textContent = "Correct";
         changeColors(clickedColor);
         topDiv.style.background = pickedColor;
-        reset.textContent = "Play Again?";
+        resetButton.textContent = "Play Again?";
       } else {
         this.style.background = "white";
         message.textContent = "Wrong";
@@ -93,7 +119,6 @@ reset.addEventListener('click', () => {
 });
 
 colorDisp.textContent = pickedColor;
-let count = 0;
 for (let i = 0; i < squares.length; i++) {
   if (colors[i]) {
     squares[i].style.background = colors[i];
