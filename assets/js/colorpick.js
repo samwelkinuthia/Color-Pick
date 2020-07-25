@@ -1,4 +1,6 @@
 let numSquares = 6;
+let limit = 3;
+let clicksLeft = document.getElementById("limit");
 let colors = generateColors(numSquares);
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
@@ -16,10 +18,16 @@ for (let i =0; i < modeBtns.length; i++) {
     modeBtns[i].classList.add("selected");
     if(modeBtns[i].textContent === "Easy") {
       numSquares = 3;
+      limit = 2;
+      clicksLeft.textContent = limit;
     } else if (modeBtns[i].textContent === "Hard") {
       numSquares = 6;
+      limit = 3;
+      clicksLeft.textContent = limit;
     } else if (modeBtns[i].textContent === "God") {
       numSquares = 9;
+      limit = 1;
+      clicksLeft.textContent = limit;
     }
     reset()
     
@@ -42,57 +50,7 @@ function reset() {
     }
   }
   topDiv.style.background = "white";
-};
-// easyBtn.addEventListener('click', () => {
-//   easyBtn.classList.add("selected");
-//   hardBtn.classList.remove("selected");
-//   godBtn.classList.remove("selected");
-//   numSquares = 3;
-//   colors = generateColors(numSquares);
-//   pickedColor = pickColor();
-//   colorDisp.textContent = pickedColor;
-//   for (let i = 0; i < squares.length; i++) {
-//     if (colors[i]) {
-//       squares[i].style.background = colors[i];
-//     } else {
-//       squares[i].style.display = "none";
-//     }
-//   }
-// });
-//
-// hardBtn.addEventListener('click', () => {
-//   hardBtn.classList.add("selected");
-//   easyBtn.classList.remove("selected");
-//   godBtn.classList.remove("selected");
-//   numSquares = 6;
-//   colors = generateColors(numSquares);
-//   pickedColor = pickColor();
-//   colorDisp.textContent = pickedColor;
-//   for (let i = 0; i < squares.length; i++) {
-//     if (colors[i]) {
-//       squares[i].style.background = colors[i];
-//       squares[i].style.display = "block";
-//     } else {
-//       squares[i].style.display = "none";
-//     }
-//   }
-// });
-//
-// godBtn.addEventListener('click', () => {
-//   godBtn.classList.add("selected");
-//   hardBtn.classList.remove("selected");
-//   easyBtn.classList.remove("selected");
-//   numSquares = 9;
-//   colors = generateColors(numSquares);
-//   pickedColor = pickColor();
-//   colorDisp.textContent = pickedColor;
-//   for (let i = 0; i < squares.length; i++) {
-//       squares[i].style.background = colors[i];
-//       squares[i].style.display = "block";
-//   }
-// });
-//
-
+}
 
 resetButton.addEventListener('click', () => {
   colors = generateColors(numSquares);
@@ -119,6 +77,9 @@ resetButton.addEventListener('click', () => {
 });
 
 colorDisp.textContent = pickedColor;
+clicksLeft.textContent = limit;
+
+let count = 0;
 for (let i = 0; i < squares.length; i++) {
   if (colors[i]) {
     squares[i].style.background = colors[i];
@@ -126,15 +87,19 @@ for (let i = 0; i < squares.length; i++) {
     squares[i].style.display = "none";
   }
   squares[i].addEventListener('click', function() {
+    count++;
     let clickedColor = this.style.background;
     if (clickedColor === pickedColor) {
       message.textContent = "Correct";
       changeColors(clickedColor);
       topDiv.style.background = pickedColor;
+      count = 0;
     } else {
-      this.style.background = "white";
+      this.style.background = "none";
+      this.style.pointerEvents = "none";
       message.textContent = "Wrong";
     }
+    console.log(count);
   })
 }
 
