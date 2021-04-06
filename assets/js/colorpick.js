@@ -30,7 +30,7 @@ for (let i =0; i < modeBtns.length; i++) {
       clicksLeft.textContent = limit;
     }
     reset()
-    
+
   })
 }
 
@@ -40,7 +40,7 @@ function reset() {
   colorDisp.textContent = pickedColor;
   message.textContent = "";
   resetButton.textContent = "New Colors";
-  
+
   for (let i = 0; i < squares.length; i++) {
     if (colors[i]) {
       squares[i].style.display = "block";
@@ -96,11 +96,11 @@ for (let i = 0; i < squares.length; i++) {
       count = 0;
     } else {
       this.style.background = "none";
-      this.style.pointerEvents = "none";
+      // this.style.pointerEvents = "none";
       message.textContent = "Wrong";
     }
     console.log(count);
-  })
+  });
 }
 
 function changeColors(color) {
